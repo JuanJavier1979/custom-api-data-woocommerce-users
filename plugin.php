@@ -21,6 +21,8 @@ define( 'CUSTOM_API_DATA_WOOCOMMERCE_USERS_INC', CUSTOM_API_DATA_WOOCOMMERCE_USE
 // Include files.
 require_once CUSTOM_API_DATA_WOOCOMMERCE_USERS_INC . 'functions/core.php';
 require_once CUSTOM_API_DATA_WOOCOMMERCE_USERS_INC . 'functions/tab.php';
+require_once CUSTOM_API_DATA_WOOCOMMERCE_USERS_INC . 'classes/class-customapidatawoocommerceusers-widget.php';
+require_once CUSTOM_API_DATA_WOOCOMMERCE_USERS_INC . 'functions/widget.php';
 
 // Activation/Deactivation.
 register_activation_hook( __FILE__, '\CustomApiDataWoocommerceUsers\Core\activate' );
@@ -29,6 +31,7 @@ register_deactivation_hook( __FILE__, '\CustomApiDataWoocommerceUsers\Core\deact
 // Bootstrap.
 CustomApiDataWoocommerceUsers\Core\setup();
 CustomApiDataWoocommerceUsers\Tab\setup();
+CustomApiDataWoocommerceUsers\Widget\setup();
 
 // Require Composer autoloader if it exists.
 if ( file_exists( CUSTOM_API_DATA_WOOCOMMERCE_USERS_PATH . '/vendor/autoload.php' ) ) {
