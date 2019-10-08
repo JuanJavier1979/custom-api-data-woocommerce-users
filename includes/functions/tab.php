@@ -58,7 +58,25 @@ function cadwu_tab_link( $items ) {
  * Add content to custom tab.
  */
 function cadwu_tab_content() {
-	esc_html_e( 'Custom Data', 'custom-api-data-woocommerce-users' );
+	?>
+	<h3><?php esc_html_e( 'Custom Data', 'custom-api-data-woocommerce-users' ); ?></h3>
+	<form class="woocommerce-EditCustomDataForm edit-custom-data" method="post">
+		<p class="form-row form-row-wide">
+			<label for="custom_data">
+				<?php esc_html_e( 'Add your profile custom data, use any alphanumeric characters. Each line will be treated as an element in the array.', 'custom-api-data-woocommerce-users' ); ?>
+			</label>
+			<textarea class="custom-data-textarea" name="custom_data" id="custom_data"><?php echo esc_html( $user->custom_data ); ?></textarea>
+		</p>
+		<p class="form-row form-row-wide">
+			<label for="custom_data">
+				<?php esc_html_e( 'API return data', 'custom-api-data-woocommerce-users' ); ?>
+			</label>
+			<textarea class="custom-data-textarea" name="custom_return_data" id="custom_return_data" disabled><?php echo esc_html( $user->custom_return_data ); ?></textarea>
+		</p>
+		<p class="form-row form-row-first">
+			<input type="button" class="button" value="<?php esc_html_e( 'Save', 'custom-api-data-woocommerce-users' ); ?>">
+		</p>
+		<div class="clear"></div>
+	</form>
+	<?php
 }
-
-
