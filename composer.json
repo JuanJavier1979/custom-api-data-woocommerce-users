@@ -1,0 +1,27 @@
+{
+  "name": "JuanJavier1979/custom-api-data-woocommerce-users",
+  "description": "Custom Api Data Woocommerce Users",
+  "authors": [
+    {
+      "name": "Author",
+      "homepage": "https://github.com/JuanJavier1979"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "CustomApiDataWoocommerceUsers\\": "includes/classes/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.2",
+    "10up/wp_mock": "dev-master",
+    "10up/phpcs-composer": "dev-master"
+  },
+  "scripts": {
+    "lint": "phpcs .",
+    "lint-fix": "phpcbf ."
+  }
+}
