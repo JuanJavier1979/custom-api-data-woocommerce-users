@@ -35,7 +35,7 @@ const requestData = async() => {
 	saveDataButton.value = 'Get data';
 };
 
-const updateButton =  document.getElementById( 'save_data_button' );
+const updateButton = document.getElementById( 'save_data_button' );
 
 if ( 'undefined' != typeof( updateButton ) && null != updateButton ) {
 	updateButton.addEventListener( 'click', requestData );
