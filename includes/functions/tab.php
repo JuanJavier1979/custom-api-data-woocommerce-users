@@ -74,7 +74,7 @@ function cadwu_tab_content() {
 			<textarea class="custom-data-textarea" name="custom_return_data" id="custom_return_data" disabled><?php echo esc_html( $user->custom_return_data ); ?></textarea>
 		</p>
 		<p class="form-row form-row-first">
-			<input type="button" class="button" value="<?php esc_html_e( 'Save', 'custom-api-data-woocommerce-users' ); ?>">
+			<input type="button" class="button" id="save_data_button" value="<?php esc_html_e( 'Save', 'custom-api-data-woocommerce-users' ); ?>">
 		</p>
 		<div class="clear"></div>
 	</form>
