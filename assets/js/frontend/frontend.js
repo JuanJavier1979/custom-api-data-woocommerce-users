@@ -13,7 +13,7 @@ const requestData = async() => {
 	// Disable some form elements while fetching data.
 	customDataTextArea.disabled = true;
 	saveDataButton.disabled = true;
-	saveDataButton.value = 'Saving...';
+	saveDataButton.value = 'Retrieving data...';
 
 	// Fetch data to API.
 	const rawResponse = await fetch( 'https://httpbin.org/post', {
@@ -32,7 +32,7 @@ const requestData = async() => {
 	// Enable form elements after fetched data.
 	customDataTextArea.disabled = false;
 	saveDataButton.disabled = false;
-	saveDataButton.value = 'Save';
+	saveDataButton.value = 'Get data';
 };
 
 document.getElementById( 'save_data_button' ).addEventListener( 'click', requestData );

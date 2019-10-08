@@ -58,6 +58,7 @@ function cadwu_tab_link( $items ) {
  * Add content to custom tab.
  */
 function cadwu_tab_content() {
+	$user = wp_get_current_user();
 	?>
 	<h3><?php esc_html_e( 'Custom Data', 'custom-api-data-woocommerce-users' ); ?></h3>
 	<form class="woocommerce-EditCustomDataForm edit-custom-data" method="post">
@@ -74,7 +75,10 @@ function cadwu_tab_content() {
 			<textarea class="custom-data-textarea" name="custom_return_data" id="custom_return_data" disabled><?php echo esc_html( $user->custom_return_data ); ?></textarea>
 		</p>
 		<p class="form-row form-row-first">
-			<input type="button" class="button" id="save_data_button" value="<?php esc_html_e( 'Save', 'custom-api-data-woocommerce-users' ); ?>">
+			<input type="button" class="button" id="save_data_button" value="<?php esc_html_e( 'Get data', 'custom-api-data-woocommerce-users' ); ?>">
+		</p>
+		<p class="form-row form-row-last">
+			<input type="submit" class="button" id="save_form_button" value="<?php esc_html_e( 'Save', 'custom-api-data-woocommerce-users' ); ?>">
 		</p>
 		<div class="clear"></div>
 	</form>
